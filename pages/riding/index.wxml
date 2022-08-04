@@ -1,0 +1,67 @@
+<view class="ridingBox">
+    <!-- gps信号 这个要封装成组件 -->
+    <view class="gpsTip">
+        <text>GPS</text>
+        <!--gps信号强度-->
+        <view class="tipInfo">
+            <view class="icon"></view>
+            <view class="icon"></view>
+            <view class="icon"></view>
+        </view>
+    </view>
+
+
+    <view class="echarts">
+        <view class="echartsInfo" wx:if="{{!touchShow}}">
+            <view class="circle_box">
+                <text class="circle_txt">
+                    <text>实时时速</text>
+                    <text class="num">{{motionInfoData.realTimeSpeedData}}</text>
+                    <text>km/m</text>
+                </text>
+            </view>
+        </view>
+
+
+        <view class="longStop" wx:if="{{touchShow}}">
+            <text>长按结束运动</text>
+        </view>
+
+    </view>
+
+
+    <view class="exercise   {{touchShow === true ? 'touchShowActive' : ''}}">
+        <view class="info">
+            <text>里程</text>
+            <text class="num">{{motionInfoData.distanceData}}</text>
+            <text>km</text>
+        </view>
+
+        <view class="info">
+            <text>运动时间</text>
+            <text class="num">{{motionInfoData.timeData}}</text>
+            <text>mm:ss</text>
+        </view>
+
+        <view class="info">
+            <text>平均速度</text>
+            <text class="num">{{motionInfoData.speedData}}</text>
+            <text>km/m</text>
+        </view>
+    </view>
+
+    <view class="btnOperation">
+        <view class="btnInfo">
+            <!--暂停才会显示-->
+            <view class="btn btnStart" wx:if="{{isSuspend}}" bind:tap="handleStart"></view>
+            <view class="btn btnPress" wx:if="{{isSuspend}}" bind:tap="touchStart"></view>
+
+            <!--不是暂定才会显示-->
+            <view class="btn btnPause" wx:if="{{!isSuspend}}" bind:tap="handleStop"></view>
+        </view>
+
+        <view class="mapIcon">
+        </view>
+    </view>
+
+</view>

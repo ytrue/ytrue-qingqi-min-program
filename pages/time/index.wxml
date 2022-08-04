@@ -1,0 +1,6 @@
+<view class="countDown">
+    <view class="text text1">3</view>
+    <view class="text text2">2</view>
+    <view class="text text3">1</view>
+    <view class="text text4">GO</view>
+</view>

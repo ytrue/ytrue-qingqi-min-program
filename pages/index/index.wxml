@@ -1,0 +1,40 @@
+<view class="index">
+    <!--中间的-->
+    <view class="topBgGradient">
+        <!-- gps信号-->
+        <view class="gpsTip">
+            <text>GPS</text>
+            <!--gps信号强度-->
+            <view class="tipInfo">
+                <view class="icon"></view>
+                <view class="icon"></view>
+                <view class="icon"></view>
+            </view>
+        </view>
+
+        <!--累计骑行-->
+        <view class="kilometre">
+            <text class="text">本月累计骑行100km</text>
+            <text class="num">0.00</text>
+        </view>
+
+    </view>
+
+    <!--下面的-->
+    <view class="botBgGradient">
+        <view class="bottomBox">
+            <view class="myBox">
+                <icon size="23" role="img"></icon>
+                <text>我的</text>
+            </view>
+
+            <view class="goExercise" bind:tap="handleStart">
+                <icon role="img" class="icon startIcon" size="23"></icon>
+            </view>
+            <view class="pathBox">
+                <icon role="img" class="icon startIcon" size="23"></icon>
+                <text>路线</text>
+            </view>
+        </view>
+    </view>
+</view>

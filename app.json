@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/riding/index",
+    "pages/time/index",
+    "pages/contribute/index",
+    "pages/contribute/finish",
+    "pages/contribute/succeed", 
+    "pages/path_plan/index",
+    "pages/my_center/index",
+    "pages/history/index",
+    "pages/history_detail/index",
+    "pages/nearby/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FCD700",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+
+    "chooseAddress",
+    "chooseLocation",
+    "choosePoi",
+    "getLocation",
+    "onLocationChange"
+  ],
+
+
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
